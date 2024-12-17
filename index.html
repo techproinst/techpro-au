@@ -21,7 +21,7 @@
     ></script>
     <style>
       body {
-        height: 1500px;
+        height: 3000px;
       }
       .header {
         background-color: #fc3468;
@@ -127,10 +127,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 140px;
-        width: 16rem;
+        width: 18rem;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
-        
       }
 
       .background-img2-wrapper {
@@ -138,20 +137,18 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 140px;
-        width: 16rem;
+        width: 18rem;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
-        
       }
       .background-img3-wrapper {
         background-image: url("images/Rectangle 12 (2).png");
         background-repeat: no-repeat;
         background-size: cover;
         height: 140px;
-        width: 16rem;
+        width: 18rem;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
-        
       }
       .background-img-wrapper p {
         line-height: 0.5;
@@ -167,8 +164,6 @@
       }
       .card-wrapper {
         border-radius: 12px;
-        
-
       }
 
       .card-body ul {
@@ -197,8 +192,6 @@
         padding-right: 10px;
         padding-bottom: 6px;
         padding-left: 10px;
-        
-
       }
 
       .enrol-btn:hover {
@@ -210,7 +203,187 @@
         padding-top: 20px;
       }
 
+      .talent-text {
+        color: #fc3468;
+      }
+
+      .slideshow-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        /* margin: auto; */
+      }
+
+      .slides {
+        display: flex;
+        animation: slide-left 20s linear infinite;
+      }
+
+      .slides img {
+        flex: 0 0 auto;
+        width: 10%;
+        height: 40px;
+        margin-right: 2rem;
+        object-fit: contain;
+      }
+
+      @keyframes slide-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .project-card {
+        border-radius: 25px;
+        border: 1px solid #fc3468;
+      }
+
+      .project-card {
+        background-color: #fff; /* Default card background */
+        border-radius: 25px;
+        border: 1px solid #fc3468;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
+      }
+
+      .project-card:hover {
+        cursor: pointer;
+        border: #fff;
+        background-color: #fc3468; /* Hover background color */
+        transform: translateY(-10px); /* Lift card slightly */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        color: #fff; /* Change text color to white for better contrast */
+      }
+
+      .project-card:hover .card-title,
+      .project-card:hover .card-text {
+        color: #fff; /* Text color changes to white on hover */
+      }
+
+      .number-wrapper {
+        background-color: #fc3468;
+        color: white;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle default shadow */
+        transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+      }
+
+      .number-wrapper:hover {
+        background-color: #ff5f8a; /* Lighter shade of pink on hover */
+        transform: scale(1.1); /* Slightly increase size */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+        cursor: pointer; /* Pointer cursor for better UX */
+      }
       
+      @media screen and (max-width:807px) {
+
+        .learn-text {
+          font-size: 1.0rem;
+        }
+      }
+
+      .background-wrapper {
+        background-image: url(images/Rectangle\ 15\ \(1\).png);
+         background-repeat: no-repeat;
+         background-size: contain;
+         height: 620px;
+      }
+
+      .background-content ul li {
+        padding:  25px 0;
+        color: white;
+        font-size: 1.1rem;
+        transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+      
+        
+      }
+
+      .background-content ul li:hover {
+        background-color: #fc3468; /* Add a vibrant background on hover */
+        transform: scale(1.05); /* Slightly enlarge the list item */
+        cursor: pointer; /* Change cursor to pointer */
+      }
+
+      .background-content {
+        padding-top: 40px;
+      }
+
+       @media screen and (max-width:1496px) {
+        .background-content ul li {
+          padding: 15px 0;
+
+        }
+
+       } 
+
+       @media screen and (max-width:1237px) {
+        .background-content ul li {
+          padding: 10px 0;
+
+        }
+       
+
+       } 
+
+       @media screen and (max-width:1128px) {
+        .background-content ul li {
+          padding: 5px 0;
+
+        }
+       
+       } 
+
+       @media screen and (max-width:1083px) {
+        .background-content ul li {
+          padding: 2px 0;
+
+        }
+        .background-content {
+          padding-top: 20px;
+        }
+        
+       
+       } 
+
+       @media screen and (max-width:957px) {
+        .background-content ul li {
+          padding: 2px 0;
+          
+        
+
+        }
+        .background-content {
+          padding-top: 25px;
+
+        }
+        .background-wrapper {
+          background-size: cover;
+        }
+        
+       
+       } 
+
+       @media screen and (max-width:600px) {
+
+        .background-content ul li {
+          padding: 2px 0;
+          font-size: 1.0em;
+          
+        
+
+        }
+
+       }
+
+
+
+
 
     </style>
   </head>
@@ -326,11 +499,12 @@
           <h3>Our Courses</h3>
         </div>
       </div>
-      
-      <div class="row mt-4">
 
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-          <div class="card card-wrapper" style="width: 16rem;">
+      <div class="row mt-4">
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4"
+        >
+          <div class="card card-wrapper" style="width: 18rem">
             <div class="background-img-wrapper text-center text-white">
               <h6 class="pt-3">Business Analysis</h6>
               <div class="pt-3">
@@ -341,11 +515,22 @@
             </div>
             <div class="card-body">
               <ul>
-                <li><span class="checkmark">✓</span>The role of a BA in Project delivery</li>
-                <li><span class="checkmark">✓</span>Conducting project discovery</li>
-                <li><span class="checkmark">✓</span>3 Cs of requirement elicitation</li>
+                <li>
+                  <span class="checkmark">✓</span>The role of a BA in Project
+                  delivery
+                </li>
+                <li>
+                  <span class="checkmark">✓</span>Conducting project discovery
+                </li>
+                <li>
+                  <span class="checkmark">✓</span>3 Cs of requirement
+                  elicitation
+                </li>
                 <li><span class="checkmark">✓</span>Use case analysis</li>
-                <li><span class="checkmark">✓</span>High level business requirement</li>
+                <li>
+                  <span class="checkmark">✓</span>High level business
+                  requirement
+                </li>
                 <li><span class="checkmark">✓</span>Gap Analysis</li>
               </ul>
               <div class="enrol-btn-wrapper text-center">
@@ -354,9 +539,11 @@
             </div>
           </div>
         </div>
-      
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-          <div class="card card-wrapper" style="width: 16rem;">
+
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4"
+        >
+          <div class="card card-wrapper" style="width: 18rem">
             <div class="background-img2-wrapper text-center text-white">
               <h6 class="pt-3">Business Analysis</h6>
               <div class="pt-3">
@@ -367,11 +554,22 @@
             </div>
             <div class="card-body">
               <ul>
-                <li><span class="checkmark">✓</span>The role of a BA in Project delivery</li>
-                <li><span class="checkmark">✓</span>Conducting project discovery</li>
-                <li><span class="checkmark">✓</span>3 Cs of requirement elicitation</li>
+                <li>
+                  <span class="checkmark">✓</span>The role of a BA in Project
+                  delivery
+                </li>
+                <li>
+                  <span class="checkmark">✓</span>Conducting project discovery
+                </li>
+                <li>
+                  <span class="checkmark">✓</span>3 Cs of requirement
+                  elicitation
+                </li>
                 <li><span class="checkmark">✓</span>Use case analysis</li>
-                <li><span class="checkmark">✓</span>High level business requirement</li>
+                <li>
+                  <span class="checkmark">✓</span>High level business
+                  requirement
+                </li>
                 <li><span class="checkmark">✓</span>Gap Analysis</li>
               </ul>
               <div class="enrol-btn-wrapper text-center">
@@ -380,9 +578,11 @@
             </div>
           </div>
         </div>
-        
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-          <div class="card card-wrapper" style="width: 16rem;">
+
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4"
+        >
+          <div class="card card-wrapper" style="width: 18rem">
             <div class="background-img3-wrapper text-center text-white">
               <h6 class="pt-3">Business Analysis</h6>
               <div class="pt-3">
@@ -393,11 +593,22 @@
             </div>
             <div class="card-body">
               <ul>
-                <li><span class="checkmark">✓</span>The role of a BA in Project delivery</li>
-                <li><span class="checkmark">✓</span>Conducting project discovery</li>
-                <li><span class="checkmark">✓</span>3 Cs of requirement elicitation</li>
+                <li>
+                  <span class="checkmark">✓</span>The role of a BA in Project
+                  delivery
+                </li>
+                <li>
+                  <span class="checkmark">✓</span>Conducting project discovery
+                </li>
+                <li>
+                  <span class="checkmark">✓</span>3 Cs of requirement
+                  elicitation
+                </li>
                 <li><span class="checkmark">✓</span>Use case analysis</li>
-                <li><span class="checkmark">✓</span>High level business requirement</li>
+                <li>
+                  <span class="checkmark">✓</span>High level business
+                  requirement
+                </li>
                 <li><span class="checkmark">✓</span>Gap Analysis</li>
               </ul>
               <div class="enrol-btn-wrapper text-center">
@@ -408,106 +619,196 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col text-center">
+          <h2 class="talent-text">Our Talents Work With Leading Companies</h2>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <div class="slideshow-container">
+              <div class="slides" id="slides">
+                <img src="images/Brisbane city council.png" alt="Slide 1" />
+                <img
+                  style="width: 5%"
+                  src="images/Mastercard.png"
+                  alt="Slide 2"
+                />
+                <img src="images/PayPal.png" alt="Slide 3" />
+                <img src="images/Frame 9 (1).png" alt="Slide 4" />
+                <img src="images/Frame 8.png" alt="Slide 5" />
+                <img style="height: 28px" src="images/Visa.png" alt="Slide 6" />
+
+                <img
+                  src="images/Brisbane city council.png"
+                  alt="Slide 1 Duplicate"
+                />
+                <img
+                  style="width: 5%"
+                  src="images/Mastercard.png"
+                  alt="Slide 2 Duplicate"
+                />
+                <img src="images/PayPal.png" alt="Slide 3 Duplicate" />
+                <img src="images/Frame 9 (1).png" alt="Slide 4 Duplicate" />
+                <img src="images/Frame 8.png" alt="Slide 5 Duplicate" />
+                <img
+                  style="height: 28px"
+                  src="images/Visa.png"
+                  alt="Slide 6 Duplicate"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col text-center">
+          <h3 class="techpr">END-TO-END</h3>
+          <h4>Why Train With Techpro</h4>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card project-card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title text-center mb-4 mt-4">
+                Real-life Project
+              </h5>
+              <p class="card-text text-center mb-5">
+                We offers oppurtunities for students to work on real life
+                projects,giving them hands-on experience and a better
+                understanding of what working in their field will be like.This
+                enhances their skills and makes them more confident and
+                competitive in the job market
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card project-card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title text-center mb-4 mt-4">
+                Cross-functional team experience
+              </h5>
+              <p class="card-text text-center mb-5">
+                We allow students to work in self-managed,cross functional teams
+                on real-life projects.This helps students develop essential
+                skills such as collaboration,communication and stakeholder
+                management,which are highly valued by employers in the tech
+                industry
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card project-card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title text-center mb-4 mt-4">
+                Local industry experience
+              </h5>
+              <p class="card-text text-center mb-5">
+                We deeply understands the local tech market and has estalished
+                relationships with companies in the industry.This allows the
+                company to provide valuable insights and supports stuents
+                seeking tech roles, helping them navigate the job market more
+                effectively and find oppurtunities with less resources.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col text-center">
+          <h3 class="techpr">Get Excited to learn</h3>
+          <h4>How will you learn</h4>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col text-center">
+          <div class="d-flex justify-content-center">
+            <div
+              class="number-wrapper d-flex justify-content-center align-items-center"
+            >
+              1
+            </div>
+          </div>
+
+          <h4 class="mt-2 learn-text">Immersive Learning</h4>
+        </div>
+        <div class="col text-center">
+          <div class="d-flex justify-content-center">
+            <div
+              class="number-wrapper d-flex justify-content-center align-items-center"
+            >
+              2
+            </div>
+          </div>
+          <h4 class="mt-2 learn-text">Real-life Projects</h4>
+        </div>
+        <div class="col text-center">
+          <div class="d-flex justify-content-center">
+            <div
+              class="number-wrapper d-flex justify-content-center align-items-center"
+            >
+              3
+            </div>
+          </div>
+          <h4 class="mt-2 learn-text">Job Ready</h4>
+        </div>
+      </div>
+      
+    </div>
+    
+      <section class="background-wrapper">
+        <div class="container">
+          <div class="row mt-5  background-content">
+            <div class="col">
+              <ul>
+                <li>Virtual-live classes (Weekend classes)</li>
+                <li>Focus on real business scenarios</li>
+                <li>Assesment and case study</li>
+                <li>Intensive training</li>
+              </ul>
+            
+            </div>
+            <div class="col">
+              <ul>
+                <li>Work on real life project</li>
+                <li>Participate in scrum ceremonies</li>
+                <li>Access to industry best tools</li>
+                <li>Project presentation and showcases</li>
+              </ul>
+
+            </div>
+            <div class="col">
+              <ul>
+                <li>Work on real life project</li>
+                <li>Participate in scrum ceremonies</li>
+                <li>Access to industry best tools</li>
+                <li>Project presentation and showcases</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+  
+  
+      </section>
     
 
   
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col text-center mt-4">
-          <h3>Our Courses</h3>
-        </div>
-      </div>
-      <div class="row  mt-4">
-        <div class="col ms-5">
-          <div class="card card-wrapper" style="width: 16rem">
-            <div class="background-img-wrapper text-center text-white">
-              <h6 class="pt-3">Business Analysis</h6>
-              <div class="pt-3">
-                <p>2 weekends of virtual learning</p>
-                <p>5 weeks of practical experience</p>
-                <p>1 week of job readiness program</p>
-              </div>
-             
-            </div>
-            <div class="card-body">
-              <ul>
-                <li>
-                  <span class="checkmark">✓</span>The role of a BA in Project
-                  delivery
-                </li>
-                <li><span class="checkmark">✓</span>Conducting project discovery</li>
-                <li><span class="checkmark">✓</span>3 Cs of requirement elicitation</li>
-                <li><span class="checkmark">✓</span>Use case analysis</li>
-                <li><span class="checkmark">✓</span>High level business requirement</li>
-                <li><span class="checkmark">✓</span>Gap Analysis</li>
-              </ul>
-              <div class="enrol-btn-wrapper text-center">
-                <a class="enrol-btn" href="">Enrol now</a>
-              </div> 
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card card-wrapper" style="width: 16rem">
-            <div class="background-img-wrapper text-center text-white">
-              <h6 class="pt-3">Business Analysis</h6>
-              <div class="pt-3">
-                <p>2 weekends of virtual learning</p>
-                <p>5 weeks of practical experience</p>
-                <p>1 week of job readiness program</p>
-              </div>
-             
-            </div>
-            <div class="card-body">
-              <ul>
-                <li>
-                  <span class="checkmark">✓</span>The role of a BA in Project
-                  delivery
-                </li>
-                <li><span class="checkmark">✓</span>Conducting project discovery</li>
-                <li><span class="checkmark">✓</span>3 Cs of requirement elicitation</li>
-                <li><span class="checkmark">✓</span>Use case analysis</li>
-                <li><span class="checkmark">✓</span>High level business requirement</li>
-                <li><span class="checkmark">✓</span>Gap Analysis</li>
-              </ul>
-              <div class="enrol-btn-wrapper text-center">
-                <a class="enrol-btn" href="">Enrol now</a>
-              </div> 
-            </div>
-          </div>
-
-        </div>
-        <div class="col">
-          <div class="card card-wrapper" style="width: 16rem">
-            <div class="background-img-wrapper text-center text-white">
-              <h6 class="pt-3">Business Analysis</h6>
-              <div class="pt-3">
-                <p>2 weekends of virtual learning</p>
-                <p>5 weeks of practical experience</p>
-                <p>1 week of job readiness program</p>
-              </div>
-             
-            </div>
-            <div class="card-body">
-              <ul>
-                <li>
-                  <span class="checkmark">✓</span>The role of a BA in Project
-                  delivery
-                </li>
-                <li><span class="checkmark">✓</span>Conducting project discovery</li>
-                <li><span class="checkmark">✓</span>3 Cs of requirement elicitation</li>
-                <li><span class="checkmark">✓</span>Use case analysis</li>
-                <li><span class="checkmark">✓</span>High level business requirement</li>
-                <li><span class="checkmark">✓</span>Gap Analysis</li>
-              </ul>
-              <div class="enrol-btn-wrapper text-center">
-                <a class="enrol-btn" href="">Enrol now</a>
-              </div> 
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>   -->
+  
+  
   </body>
 </html>
