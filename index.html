@@ -14,15 +14,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
     <style>
-      body {
-        height: 3000px;
-      }
+      /* body {
+        height: 6000px;
+      } */
       .header {
         background-color: #fc3468;
         height: 45px;
@@ -126,8 +130,8 @@
         background-image: url("images/Rectangle\ 12.png");
         background-repeat: no-repeat;
         background-size: cover;
-        height: 140px;
-        width: 18rem;
+        height: 145px;
+        width: 17.9rem;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
       }
@@ -136,8 +140,8 @@
         background-image: url("images/Rectangle 12 (1).png");
         background-repeat: no-repeat;
         background-size: cover;
-        height: 140px;
-        width: 18rem;
+        height: 145px;
+        width: 17.9rem;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
       }
@@ -145,8 +149,8 @@
         background-image: url("images/Rectangle 12 (2).png");
         background-repeat: no-repeat;
         background-size: cover;
-        height: 140px;
-        width: 18rem;
+        height: 145px;
+        width: 17.9rem;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
       }
@@ -280,28 +284,25 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
         cursor: pointer; /* Pointer cursor for better UX */
       }
-      
-      @media screen and (max-width:807px) {
 
+      @media screen and (max-width: 807px) {
         .learn-text {
-          font-size: 1.0rem;
+          font-size: 1rem;
         }
       }
 
       .background-wrapper {
-        background-image: url(images/Rectangle\ 15\ \(1\).png);
-         background-repeat: no-repeat;
-         background-size: contain;
-         height: 620px;
+        background-image: url(images/Rectangle\ 15\ \(1\).png); 
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 620px;
       }
 
       .background-content ul li {
-        padding:  25px 0;
+        padding: 25px 0;
         color: white;
         font-size: 1.1rem;
         transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-      
-        
       }
 
       .background-content ul li:hover {
@@ -314,76 +315,319 @@
         padding-top: 40px;
       }
 
-       @media screen and (max-width:1496px) {
+      @media screen and (max-width: 1496px) {
         .background-content ul li {
           padding: 15px 0;
-
         }
+      }
 
-       } 
-
-       @media screen and (max-width:1237px) {
+      @media screen and (max-width: 1237px) {
         .background-content ul li {
           padding: 10px 0;
-
         }
-       
+      }
 
-       } 
-
-       @media screen and (max-width:1128px) {
+      @media screen and (max-width: 1128px) {
         .background-content ul li {
           padding: 5px 0;
-
         }
-       
-       } 
+      }
 
-       @media screen and (max-width:1083px) {
+      @media screen and (max-width: 1083px) {
         .background-content ul li {
           padding: 2px 0;
-
         }
         .background-content {
           padding-top: 20px;
         }
-        
-       
-       } 
+      }
 
-       @media screen and (max-width:957px) {
+      @media screen and (max-width: 957px) {
         .background-content ul li {
           padding: 2px 0;
-          
-        
-
         }
         .background-content {
           padding-top: 25px;
-
         }
         .background-wrapper {
           background-size: cover;
         }
-        
-       
-       } 
+      }
 
-       @media screen and (max-width:600px) {
-
+      @media screen and (max-width: 600px) {
         .background-content ul li {
           padding: 2px 0;
-          font-size: 1.0em;
-          
-        
-
+          font-size: 1em;
         }
+      }
 
-       }
+      .slide-container {
+        max-width: 1120px;
+        width: 100%;
+        padding: 40px 0;
+      }
+      .slide-content {
+        margin: 0 40px;
+        overflow: hidden;
+        border-radius: 25px;
+      }
+      .card {
+        border-radius: 25px;
+        background-color: #fff;
+      }
+      .image-content,
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+      }
+      .image-content {
+        position: relative;
+        row-gap: 5px;
+        padding: 25px 0;
+      }
+      .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #fc3468;
+        border-radius: 25px 25px 0 25px;
+      }
+      .overlay::before,
+      .overlay::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        height: 40px;
+        width: 40px;
+        background-color: #fc3468;
+      }
+      .overlay::after {
+        border-radius: 0 25px 0 0;
+        background-color: #fff;
+      }
+      .card-image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: #fff;
+        padding: 3px;
+      }
+      .card-image .card-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #fc3468;
+      }
+      .name {
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+      }
+      .description {
+        font-size: 14px;
+        color: #707070;
+        text-align: center;
+      }
+      .button {
+        border: none;
+        font-size: 16px;
+        color: #fff;
+        padding: 8px 16px;
+        background-color: #fc3468;
+        border-radius: 6px;
+        margin: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #fc3468;
+      }
+      .swiper-navBtn {
+        color: #fc3468;
+        transition: color 0.3s ease;
+      }
+      .swiper-navBtn:hover {
+        color: #fc3468;
+      }
+      .swiper-navBtn::before,
+      .swiper-navBtn::after {
+        font-size: 35px;
+      }
+      .swiper-button-next {
+        right: 0;
+      }
+      .swiper-button-prev {
+        left: 0;
+      }
+      .swiper-pagination-bullet {
+        background-color: #fc3468;
+        opacity: 1;
+      }
+      .card-text-margin {
+        margin-top: -8px;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #fc3468;
+      }
+      @media screen and (max-width: 768px) {
+        .slide-content {
+          margin: 0 10px;
+        }
+        .swiper-navBtn {
+          display: none;
+        }
+      }
 
+      .card:hover {
+        transition: transform 0.3s ease;
+      }
 
+      /* Image Hover Effect */
+      .card-image:hover .card-img {
+        transition: transform 0.3s ease;
+      }
 
+      /* Overlay Hover Effect */
+      .card:hover .overlay {
+        opacity: 0.8; /* Fade the overlay a bit on hover for more visibility */
+        transition: opacity 0.3s ease;
+      }
 
+      @media screen and (max-width:1416px) {
+        .candidates-wrapper {
+          margin-top: -90px;
+        }
+      }
+      @media screen and (max-width:1186px) {
+        .candidates-wrapper {
+          margin-top: -100px;
+        }
+      }
+
+      .team-text {
+        font-size: 1.5em;
+      }
+      .team-text, p {
+        line-height: 1em;
+      }
+
+      @media screen and (max-width:999px) {
+        .team-text {
+          font-size: 1.0em;
+        }
+        .desc{
+        font-size: small;
+      }
+      }
+      .form-wrapper {
+        background-color: #fc3468;
+        height: 50vh;
+      }
+
+      @media screen and (max-width:781px) {
+        .schedule-text {
+          font-size: 1.0em;
+        }
+      }
+      .submit-btn {
+  color: #fc3468;
+  text-decoration-line: none;
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: 2px solid #fc3468; /* Add border to match text color */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all changes */
+}
+
+.submit-btn:hover {
+  background-color: #fc3468; /* Change background color */
+  color: #fff; /* Change text color */
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
+footer.bg-dark {
+  background-color: #343a40; /* Dark background */
+  color: #fff; /* White text */
+  padding: 40px 0; /* Padding for space around content */
+}
+
+footer .container {
+  max-width: 1200px; /* Limit the width of the footer content */
+}
+
+footer ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px; /* Space between items */
+}
+
+footer ul li a {
+  color: #fff; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Adjust font size */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+footer ul li a:hover {
+  color: #fc3468; /* Change link color on hover */
+}
+
+footer .techpr {
+  font-weight: bold; /* Make TechPr bold */
+  color: #fc3468; /* Set a distinct color for TechPr */
+}
+
+footer .bi {
+  font-size: 1.5rem; /* Increase the size of icons */
+  margin-left: 10px; /* Space between text and icon */
+}
+
+footer .bi:hover {
+  color: #fc3468; /* Change icon color on hover */
+}
+
+footer .col {
+  padding: 0 20px; /* Add spacing between columns */
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+  justify-content: space-between;
+}
+
+footer .col ul {
+  text-align: left; /* Align text to the left */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  footer .row {
+    text-align: center;
+  }
+  footer .col {
+    padding-bottom: 20px;
+  }
+}
+/* .gear-icon {
+  margin-left: 5px;
+} */
+@media screen and (max-width:505px) {
+  .gear-icon {
+    font-size: small;
+  }
+}
 
     </style>
   </head>
@@ -732,8 +976,7 @@
           <h4>How will you learn</h4>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
+   
       <div class="row mt-5">
         <div class="col text-center">
           <div class="d-flex justify-content-center">
@@ -767,48 +1010,476 @@
           <h4 class="mt-2 learn-text">Job Ready</h4>
         </div>
       </div>
-      
     </div>
-    
-      <section class="background-wrapper">
-        <div class="container">
-          <div class="row mt-5  background-content">
-            <div class="col">
-              <ul>
-                <li>Virtual-live classes (Weekend classes)</li>
-                <li>Focus on real business scenarios</li>
-                <li>Assesment and case study</li>
-                <li>Intensive training</li>
-              </ul>
-            
-            </div>
-            <div class="col">
-              <ul>
-                <li>Work on real life project</li>
-                <li>Participate in scrum ceremonies</li>
-                <li>Access to industry best tools</li>
-                <li>Project presentation and showcases</li>
-              </ul>
 
-            </div>
-            <div class="col">
-              <ul>
-                <li>Work on real life project</li>
-                <li>Participate in scrum ceremonies</li>
-                <li>Access to industry best tools</li>
-                <li>Project presentation and showcases</li>
-              </ul>
 
+    <section class="background-wrapper">
+      <div class="container">
+        <div class="row mt-5 background-content">
+          <div class="col ms-lg-5 ms-md-2">
+            <ul>
+              <li>Virtual-live classes (Weekend classes)</li>
+              <li>Focus on real business scenarios</li>
+              <li>Assesment and case study</li>
+              <li>Intensive training</li>
+            </ul>
+          </div>
+          <div class="col ms-lg-5 ms-md-2">
+            <ul>
+              <li>Work on real life project</li>
+              <li>Participate in scrum ceremonies</li>
+              <li>Access to industry best tools</li>
+              <li>Project presentation and showcases</li>
+            </ul>
+          </div>
+          <div class="col ms-lg-5 ms-md-2">
+            <ul>
+              <li>Work on real life project</li>
+              <li>Participate in scrum ceremonies</li>
+              <li>Access to industry best tools</li>
+              <li>Project presentation and showcases</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row candidates-wrapper">
+        <div class="col text-center">
+          <h3 class="techpr">OUR HAPPY CANDIDATES</h3>
+          <h4>We've helped thousands of people</h4>
+        </div>
+      </div>
+
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img
+                    src="images/Rectangle 18 (1).png"
+                    alt=""
+                    class="card-img"
+                  />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Adetunji Lanre</h2>
+                <h6 class="card-text-margin">America</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                </div>
+                <p class="description">
+                  Tech Pro Institute helped me transition into the tech industry
+                  as a business analyst without IT experience. Their platform
+                  improved my tech skills and confidence, enabling success in
+                  interviews. I landed my first role just two weeks after
+                  completing their seven-week training program.
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img
+                    src="images/Rectangle 18 (2).png"
+                    alt=""
+                    class="card-img"
+                  />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Adeniyi Loveth</h2>
+                <h6 class="card-text-margin">Australia</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 5.png" alt="" />
+                </div>
+                <p class="description">
+                  Tech Pro Institute helped me transition into the tech industry
+                  as a business analyst without IT experience. Their platform
+                  improved my tech skills and confidence, enabling success in
+                  interviews. I landed my first role just two weeks after
+                  completing their seven-week training program
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img src="images/Rectangle 18.png" alt="" class="card-img" />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Ifesan Sayo</h2>
+                <h6 class="card-text-margin">Australia</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                </div>
+                <p class="description">
+                  A friend introduced me to Tech Pro Institute in 2002. The
+                  skills I gained through their training were vital for success
+                  in interviews and on-the-job performance. I’m truly grateful
+                  for the opportunity and support from Tech Pro Institute, which
+                  played a key role in transforming my career.
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img
+                    src="images/Rectangle 18 (1).png"
+                    alt=""
+                    class="card-img"
+                  />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Adeniyi Loveth</h2>
+                <h6 class="card-text-margin">Australia</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 5.png" alt="" />
+                </div>
+                <p class="description">
+                  Tech Pro Institute helped me transition into the tech industry
+                  as a business analyst without IT experience. Their platform
+                  improved my tech skills and confidence, enabling success in
+                  interviews. I landed my first role just two weeks after
+                  completing their seven-week training program
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img
+                    src="images/Rectangle 18 (2).png"
+                    alt=""
+                    class="card-img"
+                  />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Adetunji Lanre</h2>
+                <h6 class="card-text-margin">America</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                </div>
+                <p class="description">
+                  Tech Pro Institute helped me transition into the tech industry
+                  as a business analyst without IT experience. Their platform
+                  improved my tech skills and confidence, enabling success in
+                  interviews. I landed my first role just two weeks after
+                  completing their seven-week training program.
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img src="images/Rectangle 18.png" alt="" class="card-img" />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Ifesan Sayo</h2>
+                <h6 class="card-text-margin">Australia</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                </div>
+                <p class="description">
+                  A friend introduced me to Tech Pro Institute in 2002. The
+                  skills I gained through their training were vital for success
+                  in interviews and on-the-job performance. I’m truly grateful
+                  for the opportunity and support from Tech Pro Institute, which
+                  played a key role in transforming my career.
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img src="images/Rectangle 12.png" alt="" class="card-img" />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Adeniyi Loveth</h2>
+                <h6 class="card-text-margin">Australia</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 5.png" alt="" />
+                </div>
+                <p class="description">
+                  Tech Pro Institute helped me transition into the tech industry
+                  as a business analyst without IT experience. Their platform
+                  improved my tech skills and confidence, enabling success in
+                  interviews. I landed my first role just two weeks after
+                  completing their seven-week training program
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img
+                    src="images/Rectangle 18 (1).png"
+                    alt=""
+                    class="card-img"
+                  />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Ifesan Sayo</h2>
+                <h6 class="card-text-margin">Australia</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                </div>
+                <p class="description">
+                  A friend introduced me to Tech Pro Institute in 2002. The
+                  skills I gained through their training were vital for success
+                  in interviews and on-the-job performance. I’m truly grateful
+                  for the opportunity and support from Tech Pro Institute, which
+                  played a key role in transforming my career.
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                  <img
+                    src="images/Rectangle 12 (2).png"
+                    alt=""
+                    class="card-img"
+                  />
+                </div>
+              </div>
+              <div class="card-content">
+                <h2 class="name">Adeniyi Loveth</h2>
+                <h6 class="card-text-margin">Australia</h6>
+                <div class="text-center card-text-margin">
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 1.png" alt="" />
+                  <img width="5%" src="images/Star 5.png" alt="" />
+                </div>
+                <p class="description">
+                  Tech Pro Institute helped me transition into the tech industry
+                  as a business analyst without IT experience. Their platform
+                  improved my tech skills and confidence, enabling success in
+                  interviews. I landed my first role just two weeks after
+                  completing their seven-week training program
+                </p>
+              </div>
             </div>
           </div>
         </div>
-  
-  
-      </section>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="row mt-5 text-center">
+        <div class="col">
+          <h1 class="techpr">850+</h1>
+          <h6>Number of candidates</h6>
+
+        </div>
+        <div class="col">
+          <h1 class="techpr">4.8/5</h1>
+          <h6>Customer satisfaction Rate</h6>
+
+        </div>
+        <div class="col">
+          <h1 class="techpr">20</h1>
+          <h6>Proffessional team members</h6>
+
+        </div>
+      </div>
+      <div class="row mt-5 text-center">
+        <div class="col">
+          <h1>Meet The  <span class="techpr">Team</span></h1>
+
+        </div>
+      </div>
+      <div class="row mt-5 text-center">
+        <div class="col">
+          <img width="45%" class="img-fluid" src="images/Ellipse 7 (1).png" alt="">
+          <h3 class="pt-4 team-text">Aisha Olayiwola</h3>
+          <p class="desc">Business Analyst Lead/Mentor</p>
+
+        </div>
+        <div class="col">
+          <img  width="45%" class="img-fluid" src="images/Ellipse 7 (2).png" alt="">
+          <h3 class="pt-4 team-text">Kabir Akinola</h3>
+          <p class="desc">Senior Business Analyst/Career Coach</p>
+
+        </div>
+        <div class="col">
+          <img  width="45%" class="img-fluid" src="images/Ellipse 7.png" alt="">
+          <h3 class="pt-4 team-text">Dr Olukpmaiya</h3>
+          <p class="desc">Senior Reporting Officer/Mentor</p>
+
+
+        </div>
+      </div>
+
+      <div class="row mt-5 text-center">
+        <div class="col">
+          <h1 class="techpr">FREE <span class="text-dark">1 ON 1</span> CAREER GUIDE</h1>
+          <h5 class="mt-5 schedule-text">Schedule a free one-on-one consultation to discuss unique circumstances and explore your potential transition into the business side of tech. Simply complete the form below, and one of our career will get in touch with you.</h5>
+
+        </div>
+
+      </div>
+    </div>
+
+    <section class="form-wrapper mt-5">
+      <div class="container">
+        <div class="row pt-5">
+          <div class="col">
+            <label class="text-white" for="">Full Name</label>
+            <input  type="text" class="form-control" placeholder="First name" aria-label="First name">
+          </div>
+          <div class="col">
+            <label class="text-white" for="">Last Name</label>
+            <input  type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col">
+            <label class="text-white" for="">Phone Number</label>
+            <input  type="text" class="form-control" placeholder="+61405380435" aria-label="First name">
+          </div>
+          <div class="col">
+            <label class="text-white" for="">Email</label>
+            <input  type="text" class="form-control" placeholder="User@gmail.com" aria-label="Last name">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label text-white">Information/comment</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col text-center">
+            <a class="submit-btn" href="">Submit</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <ul>
+              <li><a href=""><span class="techpr">TechPr</span><i style="margin-left: 5px;" class="bi bi-gear gear-icon"></i></a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><a href="">Quick Links</a></li>
+              <li><a href="">FAQS</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Project</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><a href="">Policies</a></li>
+              <li><a href="">Terms & Condition</a></li>
+              <li><a href="">Refund Policy</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><a href="">Social</a></li>
+              <li><a href=""><i class="bi bi-facebook"></i></a></li>
+              <li><a href=""><i class="bi bi-twitter-x"></i></a></li>
+              <li><a href=""><i class="bi bi-whatsapp"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     
 
-  
-  
-  
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        loop: true,
+        centerSlide: "true",
+        fade: "true",
+        grabCursor: "true",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          520: {
+            slidesPerView: 2,
+          },
+          950: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
